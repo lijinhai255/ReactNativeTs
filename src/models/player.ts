@@ -10,7 +10,7 @@ import {
   stop,
 } from '@/config/sound';
 import {RootState} from '.';
-// import {saveProgram} from '@/config/realm';
+import {saveProgram} from '@/config/realm';
 
 const SHOW_URL = '/mock/13/show';
 
@@ -84,7 +84,7 @@ const playerModel: PlayerModel = {
     },
   },
   effects: {
-    *fetchShow({payload}, {call, put, select}) {
+    *fetchShow({payload}, {call, put, select}) {// select 获取整个DVa的state
       yield call(stop);
       const {data} = yield call(axios.get, SHOW_URL, {
         params: {id: payload.id},
@@ -108,14 +108,14 @@ const playerModel: PlayerModel = {
         title,
         thumbnailUrl,
         currentTime,
-      }: PlayerModelState = yield select(({player}: RootState) => player);
-      // saveProgram({
-      //   id,
-      //   title,
-      //   thumbnailUrl,
-      //   currentTime,
-      //   duration: getDuration(),
-      // });
+      }: PlayerModelState = yield select(({player}: RootState) => player); 
+      saveProgram({
+        id,
+        title,
+        thumbnailUrl,
+        currentTime,
+        duration: getDuration(),
+      });
     },
     *play({payload}, {call, put}) {
       yield put({
@@ -148,7 +148,7 @@ const playerModel: PlayerModel = {
       const {id, currentTime}: PlayerModelState = yield select(
         ({player}: RootState) => player,
       );
-      // saveProgram({id, currentTime});
+      saveProgram({id, currentTime});
     },
     watcherCurrentTime: [
       function*(sagaEffects) {

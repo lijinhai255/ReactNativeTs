@@ -113,7 +113,9 @@ function RootStackScreen() {
           headerTitle: '分类',
         }}
       />
-      <Stack.Screen name="Album" component={Album} options={getAlbumOptions} />
+      <Stack.Screen name="Album" 
+      component={Album} 
+      options={getAlbumOptions} />
     </Stack.Navigator>
   );
 }

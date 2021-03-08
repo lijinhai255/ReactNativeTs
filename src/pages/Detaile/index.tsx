@@ -144,7 +144,7 @@ class Detail extends React.PureComponent<IPorps, IState>{
   render() {
     const { barrage, barrageData } = this.state;
     const { playState, previousId, nextId, thumbnailUrl } = this.props;
-    console.log(barrageData,"barrageData-barrageData")
+    // console.log(barrageData,"barrageData-barrageData")
     return (
       <View style={styles.container}>
         <View style={styles.imageView}>

@@ -6,3 +6,10 @@ npx iconfont-rn
 ```
 node vendors/server/app.js
 ```
+
+```js
+
+reamjs  保存用户操作相关信息
+  
+
+```

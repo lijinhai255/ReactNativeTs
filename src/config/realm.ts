@@ -10,6 +10,8 @@ export interface IProgram {
 }
 
 class Program {
+  // currentTime=0;
+  // duration=0
   static schema = {
     name: 'Program',
     primaryKey: 'id',
@@ -17,11 +19,15 @@ class Program {
       id: 'string',
       title: 'string',
       thumbnailUrl: 'string',
-      currentTime: {type: 'double', default: 0},
-      duration: {type: 'double', default: 0},
-      rate: {type: 'double', default: 0},
+      currentTime: { type: 'double', default: 0 },
+      duration: { type: 'double', default: 0 },
+      rate: { type: 'double', default: 0 },
     },
   };
+  // get rate(){
+  //   return this.duration>0?Math.floor((this.currentTime*100/this.duration*100)/100):0
+
+  // }
 }
 
 const realm = new Realm({

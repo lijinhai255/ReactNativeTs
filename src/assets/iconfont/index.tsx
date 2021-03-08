@@ -4,6 +4,8 @@
 import React, { FunctionComponent } from 'react';
 import { ViewProps } from 'react-native';
 import { GProps } from 'react-native-svg';
+import IconShanchu1 from './IconShanchu1';
+import IconTime from './IconTime';
 import IconBofang from './IconBofang';
 import IconKuaijin from './IconKuaijin';
 import IconZanting from './IconZanting';
@@ -27,7 +29,7 @@ import IconIconHome from './IconIconHome';
 import IconXinaixin from './IconXinaixin';
 import IconCeshi from './IconCeshi';
 
-export type IconNames = 'icon-bofang' | 'icon-kuaijin' | 'icon-zanting' | 'icon-shangyishou_huaban' | 'icon-down' | 'icon-erji' | 'icon-shengyin1' | 'icon-huaban' | 'icon-listen' | 'icon-shengyin' | 'icon-huanyipi' | 'icon-icon_more' | 'icon-xihuan' | 'icon-zhanghu' | 'icon-faxian' | 'icon-faxian1' | 'icon--star-o' | 'icon-xingzhuang60kaobei2-copy' | 'icon-shouye' | 'icon-icon_home' | 'icon-xinaixin' | 'icon-ceshi';
+export type IconNames = 'icon-shanchu1' | 'icon-time' | 'icon-bofang' | 'icon-kuaijin' | 'icon-zanting' | 'icon-shangyishou_huaban' | 'icon-down' | 'icon-erji' | 'icon-shengyin1' | 'icon-huaban' | 'icon-listen' | 'icon-shengyin' | 'icon-huanyipi' | 'icon-icon_more' | 'icon-xihuan' | 'icon-zhanghu' | 'icon-faxian' | 'icon-faxian1' | 'icon--star-o' | 'icon-xingzhuang60kaobei2-copy' | 'icon-shouye' | 'icon-icon_home' | 'icon-xinaixin' | 'icon-ceshi';
 
 interface Props extends GProps, ViewProps {
   name: IconNames;
@@ -37,50 +39,54 @@ interface Props extends GProps, ViewProps {
 
 let IconFont: FunctionComponent<Props> = ({ name, ...rest }) => {
   switch (name) {
+    case 'icon-shanchu1':
+      return <IconShanchu1 key="1" {...rest} />;
+    case 'icon-time':
+      return <IconTime key="2" {...rest} />;
     case 'icon-bofang':
-      return <IconBofang key="1" {...rest} />;
+      return <IconBofang key="3" {...rest} />;
     case 'icon-kuaijin':
-      return <IconKuaijin key="2" {...rest} />;
+      return <IconKuaijin key="4" {...rest} />;
     case 'icon-zanting':
-      return <IconZanting key="3" {...rest} />;
+      return <IconZanting key="5" {...rest} />;
     case 'icon-shangyishou_huaban':
-      return <IconShangyishouHuaban key="4" {...rest} />;
+      return <IconShangyishouHuaban key="6" {...rest} />;
     case 'icon-down':
-      return <IconDown key="5" {...rest} />;
+      return <IconDown key="7" {...rest} />;
     case 'icon-erji':
-      return <IconErji key="6" {...rest} />;
+      return <IconErji key="8" {...rest} />;
     case 'icon-shengyin1':
-      return <IconShengyin1 key="7" {...rest} />;
+      return <IconShengyin1 key="9" {...rest} />;
     case 'icon-huaban':
-      return <IconHuaban key="8" {...rest} />;
+      return <IconHuaban key="10" {...rest} />;
     case 'icon-listen':
-      return <IconListen key="9" {...rest} />;
+      return <IconListen key="11" {...rest} />;
     case 'icon-shengyin':
-      return <IconShengyin key="10" {...rest} />;
+      return <IconShengyin key="12" {...rest} />;
     case 'icon-huanyipi':
-      return <IconHuanyipi key="11" {...rest} />;
+      return <IconHuanyipi key="13" {...rest} />;
     case 'icon-icon_more':
-      return <IconIconMore key="12" {...rest} />;
+      return <IconIconMore key="14" {...rest} />;
     case 'icon-xihuan':
-      return <IconXihuan key="13" {...rest} />;
+      return <IconXihuan key="15" {...rest} />;
     case 'icon-zhanghu':
-      return <IconZhanghu key="14" {...rest} />;
+      return <IconZhanghu key="16" {...rest} />;
     case 'icon-faxian':
-      return <IconFaxian key="15" {...rest} />;
+      return <IconFaxian key="17" {...rest} />;
     case 'icon-faxian1':
-      return <IconFaxian1 key="16" {...rest} />;
+      return <IconFaxian1 key="18" {...rest} />;
     case 'icon--star-o':
-      return <IconStarO key="17" {...rest} />;
+      return <IconStarO key="19" {...rest} />;
     case 'icon-xingzhuang60kaobei2-copy':
-      return <IconXingzhuang60Kaobei2Copy key="18" {...rest} />;
+      return <IconXingzhuang60Kaobei2Copy key="20" {...rest} />;
     case 'icon-shouye':
-      return <IconShouye key="19" {...rest} />;
+      return <IconShouye key="21" {...rest} />;
     case 'icon-icon_home':
-      return <IconIconHome key="20" {...rest} />;
+      return <IconIconHome key="22" {...rest} />;
     case 'icon-xinaixin':
-      return <IconXinaixin key="21" {...rest} />;
+      return <IconXinaixin key="23" {...rest} />;
     case 'icon-ceshi':
-      return <IconCeshi key="22" {...rest} />;
+      return <IconCeshi key="24" {...rest} />;
   }
 
   return null;
