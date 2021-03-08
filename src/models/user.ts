@@ -7,8 +7,8 @@ const UESR_URL = "mock/21/login"
 
 
 export interface IUser{
-    name:"string",
-    avatar:"string"
+    name:string,
+    avatar:string
 }
 
 
@@ -19,9 +19,10 @@ export interface UserModelState {
 export interface UserModel extends Model {
     namespace:"user",
     state:UserModelState,
-    effect:{
+    effects:{
         login:Effect,
-        logout:Effect
+        logout:Effect,
+
     },
     reducers:{
         setState:Reducer<UserModelState>
@@ -43,9 +44,13 @@ const UserModel:UserModel ={
             }
         }
     },
-    effect:{
+    effects:{
         *login({payload},{call,put}){
+           console.log(payload,"jll",UESR_URL)
+
            const {data,status,msg} =   yield call(axios.post,UESR_URL,payload)
+           console.log(data,status,msg,"jll")
+
            if(status === 100){
                yield put({
                    type:"setState",

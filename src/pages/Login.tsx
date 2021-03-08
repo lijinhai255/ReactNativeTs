@@ -4,7 +4,7 @@ import {Formik, Field} from 'formik';
 import Touchable from '@/components/Touchable';
 import {RootState} from '../models';
 import {connect, ConnectedProps} from 'react-redux';
-// import * as Yup from 'yup';
+import * as Yup from 'yup';
 import Input from '@/components/Input';
 
 interface Values {
@@ -27,30 +27,32 @@ const connector = connect(mapStateToProps);
 
 type ModelState = ConnectedProps<typeof connector>;
 
-// const validationSchema = Yup.object().shape({
-//   account: Yup.string()
-//     .trim()
-//     .required('请输入您的账号'),
-//   password: Yup.string()
-//     .trim()
-//     .required('请输入密码'),
-// });
+const validationSchema = Yup.object().shape({
+  account: Yup.string()
+    .trim()
+    .required('请输入您的账号'),
+  password: Yup.string()
+    .trim()
+    .required('请输入密码'),
+});
 
 class Login extends React.Component<ModelState> {
-//   onSubmit = (values: Values) => {
-//     const {dispatch} = this.props;
-//     dispatch({
-//       type: 'user/login',
-//       payload: values,
-//     });
-//   };
+  onSubmit = (values: Values) => {
+    const {dispatch} = this.props;
+    console.log("121212121",values,dispatch)
+    dispatch({
+      type: 'user/login',
+      payload: values,
+    });
+  };
   render() {
     const {loading} = this.props;
+    console.log(loading,"loading-loading")
     return (
       <ScrollView keyboardShouldPersistTaps="handled">
         <Text style={styles.logo}>登陆</Text>
         <Formik
-        //   validationSchema={validationSchema}
+          validationSchema={validationSchema}
           initialValues={initialValues}
           onSubmit={this.onSubmit}>
           {({handleSubmit}) => {
