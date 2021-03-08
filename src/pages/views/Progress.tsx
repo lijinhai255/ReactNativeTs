@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { ReactElement } from 'react';
 import {AnimatedCircularProgress} from 'react-native-circular-progress';
 
 import {RootState} from '@/models/index';
@@ -15,7 +15,9 @@ const connector = connect(mapStateToProps);
 
 type ModelState = ConnectedProps<typeof connector>;
 
-interface IProps extends ModelState {}
+interface IProps extends ModelState {
+    children:ReactElement
+}
 
 
 class Progress extends React.Component<IProps> {

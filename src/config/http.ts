@@ -1,8 +1,8 @@
 import axios from 'axios';
 import Config from 'react-native-config';
 
-// axios.defaults.baseURL = Config.API_URL;
-axios.defaults.baseURL = "http://192.168.1.102:3000";
+axios.defaults.baseURL = Config.API_URL;
+// axios.defaults.baseURL = "http://192.168.1.102:3000";
 // console.log(Config.API_URL,"Config.API_URL")
 // axios.defaults.baseURL = 'http://192.168.31.31:3000';
 axios.interceptors.request.use(

@@ -22,7 +22,9 @@ export type BottonTabParamList = {
 
 }
 const Tab = createBottomTabNavigator<BottonTabParamList>();
-type Route = RouteProp<RootStackParamList, "Home"> & { state?: TabNavigationState }
+type Route = RouteProp<RootStackParamList, 'BottonTabes'> & {
+  state?: TabNavigationState;
+};
 
 interface IPors {
   navigation: RootStackNavigation,

@@ -57,6 +57,7 @@ class Play extends React.Component<IProps> {
   }
   onPress = () => {
     const {onPress, thumbnailUrl} = this.props;
+    console.log(thumbnailUrl,"thumbnailUrl")
     if(thumbnailUrl && onPress) {
       onPress();
     }
@@ -65,16 +66,15 @@ class Play extends React.Component<IProps> {
     const {thumbnailUrl} = this.props;
     return (
       <Touchable style={styles.play} onPress={this.onPress}>
-        {/* <Progress>
+        <Progress>
           <Animated.View style={{transform: [{rotate: this.rotate}]}}>
             {thumbnailUrl ? (
               <Image source={{uri: thumbnailUrl}} style={styles.image} />
             ) : (
-              <Icon name="icon-bofang3" color="#ededed" size={40} />
+              <Icon name="icon-bofang" color="#ededed" size={40} />
             )}
           </Animated.View>
-        </Progress> */}
-        <View><Text>121</Text></View>
+        </Progress>
       </Touchable>
     );
   }

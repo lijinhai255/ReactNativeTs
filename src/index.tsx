@@ -1,21 +1,27 @@
-import React from "react"
-import Home from "@/pages/Home/index"
-import Navigators from '@/navigator/index';
-import { Provider } from "react-redux"
-import store from "@/config/dva"
-import { StatusBar } from "react-native"
+import React from 'react';
+import {Provider} from 'react-redux';
+import Navigator from '@/navigator/index';
+import store from '@/config/dva';
+import {StatusBar} from 'react-native';
+import {RootSiblingParent} from 'react-native-root-siblings';
+import '@/config/http';
+import {enableScreens} from 'react-native-screens';
+
+enableScreens();
+
 export default class extends React.Component {
-    render() {
-        return (
-            <Provider store={store}>
-                  <StatusBar
-                    backgroundColor="transparent"
-                    barStyle="dark-content"
-                    translucent
-                />
-                <Navigators />
-              
-            </Provider>
-        )
-    }
+  render() {
+    return (
+      <Provider store={store}>
+        <RootSiblingParent>
+          <Navigator />
+        </RootSiblingParent>
+        <StatusBar
+          backgroundColor="transparent"
+          barStyle="dark-content"
+          translucent
+        />
+      </Provider>
+    );
+  }
 }
