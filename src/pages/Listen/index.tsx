@@ -49,7 +49,6 @@ class Home extends React.PureComponent<IProps> {
     // realm.delete(program)
     realm.write(() => {
     console.log(`id='${item.id}'`,"jll")
-
       realm.delete(item);
     });
     this.setState({})
