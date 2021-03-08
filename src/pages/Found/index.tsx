@@ -47,7 +47,18 @@ class Home extends React.PureComponent<IProps, IState> {
     )
 
   }
-  setCurrentId=()=>{
+  setCurrentId=(id:string)=>{
+    this.setState({
+      currentId:id
+    })
+    const {dispatch} = this.props
+    console.log(id,"id-id")
+    if(id){
+      dispatch({
+        type:"player/pause"
+      })
+
+    }
 
   }
 

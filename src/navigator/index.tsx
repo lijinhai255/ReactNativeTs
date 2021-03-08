@@ -19,7 +19,7 @@ import {Platform, StyleSheet, StatusBar, Animated} from 'react-native';
 import Icon from '@/assets/iconfont';
 import PlayView from '@/pages/views/PlayView';
 import {getActiveRouteName, navigationRef} from '@/utils/index';
-// import Login from '@/pages/Login';
+import Login from '@/pages/Login';
 import SplashScreen from 'react-native-splash-screen';
 
 export type RootStackParamList = {
@@ -125,7 +125,7 @@ export type ModalStackParamList = {
   Detail: {
     id: string;
   };
-  // Login: undefined;
+  Login: undefined;
 };
 
 const ModalStack = createStackNavigator<ModalStackParamList>();
@@ -167,13 +167,13 @@ function ModalStackScreen() {
           ),
         }}
       />
-      {/* <ModalStack.Screen
+      <ModalStack.Screen
         name="Login"
         component={Login}
         options={{
           headerTitle: '登录',
         }}
-      /> */}
+      />
     </ModalStack.Navigator>
   );
 }
