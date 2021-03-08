@@ -74,13 +74,19 @@ class Detail extends React.PureComponent<IPorps, IState>{
   anim = new Animated.Value(1);
   componentDidMount() {
     const {dispatch, route, navigation, title, id} = this.props;
-    console.log(route, 'route-route')
-    dispatch({
-      type: "player/fetchShow",
-      payload: {
-        id: route.params.id
-      }
-    })
+    // console.log(route, 'route-route')
+    if(route.params && route.params.id !== id) {
+      dispatch({
+        type: 'player/fetchShow',
+        payload: {
+          id: route.params.id,
+        },
+      });
+    } else {
+      dispatch({
+        type: 'player/play'
+      });
+    }
     navigation.setOptions({
       headerTitle: title,
     });
