@@ -18,7 +18,7 @@ class Input extends React.PureComponent<IProps> {
 
   render() {
     const {form, field, ...rest} = this.props;
-    console.log(this.props,"this.props")
+    // console.log(this.props,"this.props")
     return (
       <View style={styles.container}>
         <TextInput
