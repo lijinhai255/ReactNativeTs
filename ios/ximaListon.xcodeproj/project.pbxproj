@@ -19,6 +19,7 @@
 		7594067B4051B3C28C1638F7 /* libPods-ximaListon.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 646447AFB8C17653C0D32894 /* libPods-ximaListon.a */; };
 		81AB9BB82411601600AC10FF /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 81AB9BB72411601600AC10FF /* LaunchScreen.storyboard */; };
 		B3251882FABBFECBCCADBFF5 /* libPods-ximaListon-tvOSTests.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 68F66E5D79C0BA825073F0AB /* libPods-ximaListon-tvOSTests.a */; };
+		B462A36C25F7520D0091B662 /* Launch Screen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B462A36B25F7520C0091B662 /* Launch Screen.storyboard */; };
 		C1D92BF03259724CD5CF8FD0 /* libPods-ximaListon-tvOS.a in Frameworks */ = {isa = PBXBuildFile; fileRef = E4592FEB688E2324E83FCEB4 /* libPods-ximaListon-tvOS.a */; };
 /* End PBXBuildFile section */
 
@@ -62,6 +63,7 @@
 		81AB9BB72411601600AC10FF /* LaunchScreen.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; name = LaunchScreen.storyboard; path = ximaListon/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		A71060BB51237B657434C3E4 /* Pods-ximaListon-ximaListonTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ximaListon-ximaListonTests.debug.xcconfig"; path = "Target Support Files/Pods-ximaListon-ximaListonTests/Pods-ximaListon-ximaListonTests.debug.xcconfig"; sourceTree = "<group>"; };
 		ADFAF825C7A0B682D655AB6B /* Pods-ximaListon-tvOS.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ximaListon-tvOS.release.xcconfig"; path = "Target Support Files/Pods-ximaListon-tvOS/Pods-ximaListon-tvOS.release.xcconfig"; sourceTree = "<group>"; };
+		B462A36B25F7520C0091B662 /* Launch Screen.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = "Launch Screen.storyboard"; sourceTree = "<group>"; };
 		E4592FEB688E2324E83FCEB4 /* libPods-ximaListon-tvOS.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-ximaListon-tvOS.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		ED297162215061F000B7C4FE /* JavaScriptCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = JavaScriptCore.framework; path = System/Library/Frameworks/JavaScriptCore.framework; sourceTree = SDKROOT; };
 		ED2971642150620600B7C4FE /* JavaScriptCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = JavaScriptCore.framework; path = Platforms/AppleTVOS.platform/Developer/SDKs/AppleTVOS12.0.sdk/System/Library/Frameworks/JavaScriptCore.framework; sourceTree = DEVELOPER_DIR; };
@@ -134,7 +136,6 @@
 				A71060BB51237B657434C3E4 /* Pods-ximaListon-ximaListonTests.debug.xcconfig */,
 				5B4209C6D1686094A8A449D4 /* Pods-ximaListon-ximaListonTests.release.xcconfig */,
 			);
-			name = Pods;
 			path = Pods;
 			sourceTree = "<group>";
 		};
@@ -175,6 +176,7 @@
 		83CBB9F61A601CBA00E9B192 = {
 			isa = PBXGroup;
 			children = (
+				B462A36B25F7520C0091B662 /* Launch Screen.storyboard */,
 				13B07FAE1A68108700A75B9A /* ximaListon */,
 				832341AE1AAA6A7D00B99B32 /* Libraries */,
 				00E356EF1AD99517003FC87E /* ximaListonTests */,
@@ -340,6 +342,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				B462A36C25F7520D0091B662 /* Launch Screen.storyboard in Resources */,
 				81AB9BB82411601600AC10FF /* LaunchScreen.storyboard in Resources */,
 				13B07FBF1A68108700A75B9A /* Images.xcassets in Resources */,
 			);

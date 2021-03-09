@@ -66,6 +66,8 @@ function randomIndex(length: number) {
 function getText() {
   return data[randomIndex(data.length)];
 }
+let timmer:any = null
+
 class Detail extends React.PureComponent<IPorps, IState>{
   state = {
     barrage: false,
@@ -90,10 +92,19 @@ class Detail extends React.PureComponent<IPorps, IState>{
     navigation.setOptions({
       headerTitle: title,
     });
-    this.addBarrage();
+    // this.addBarrage();
+  }
+  componentWillUnmount(){
+    const {dispatch, playState,route, navigation, title, id} = this.props;
+    dispatch({
+      type: playState === 'playing' ? 'player/pause' : 'player/play',
+    });
+    console.log(1212121)
+    clearInterval(timmer)
   }
   
   componentDidUpdate(prevProps: IPorps) {
+    
     if (this.props.title !== prevProps.title) {
       this.props.navigation.setOptions({
         headerTitle: this.props.title,
@@ -101,7 +112,7 @@ class Detail extends React.PureComponent<IPorps, IState>{
     }
   }
   addBarrage = () => {
-    setInterval(() => {
+    timmer =  setInterval(() => {
       const {barrage} = this.state;
       if (barrage) {
         const id = Date.now();

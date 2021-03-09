@@ -251,11 +251,11 @@ PODS:
     - React-Core
   - react-native-splash-screen (3.2.0):
     - React
-  - react-native-video (5.1.0-alpha6):
-    - React
-    - react-native-video/Video (= 5.1.0-alpha6)
-  - react-native-video/Video (5.1.0-alpha6):
-    - React
+  - react-native-video (5.1.1):
+    - React-Core
+    - react-native-video/Video (= 5.1.1)
+  - react-native-video/Video (5.1.1):
+    - React-Core
   - react-native-viewpager (5.0.11):
     - React-Core
   - React-RCTActionSheet (0.63.4):
@@ -534,7 +534,7 @@ SPEC CHECKSUMS:
   react-native-config: c98128a72bc2c3a1ca72caec0b021f0fa944aa29
   react-native-safe-area-context: b6e0e284002381d2ff29fa4fff42b4d8282e3c94
   react-native-splash-screen: 200d11d188e2e78cea3ad319964f6142b6384865
-  react-native-video: a6813b9edc39fa2d50da565b6475ecc68083cc8e
+  react-native-video: 0bb76b6d6b77da3009611586c7dbf817b947f30e
   react-native-viewpager: b99b53127d830885917ef84809c5065edd614a78
   React-RCTActionSheet: 89a0ca9f4a06c1f93c26067af074ccdce0f40336
   React-RCTAnimation: 1bde3ecc0c104c55df246eda516e0deb03c4e49b
@@ -556,6 +556,6 @@ SPEC CHECKSUMS:
   Yoga: 4bd86afe9883422a7c4028c00e34790f560923d6
   YogaKit: f782866e155069a2cca2517aafea43200b01fd5a
 
-PODFILE CHECKSUM: 2b8730cb680930243da599ffc24ed363e0ef4e56
+PODFILE CHECKSUM: 89283ea606c2e8db39d27aa6b3eb37e8b837b0a2
 
 COCOAPODS: 1.10.1

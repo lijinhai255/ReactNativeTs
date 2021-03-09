@@ -8,8 +8,6 @@ target 'ximaListon' do
 
   use_react_native!(:path => config["reactNativePath"])
   
-  pod 'RNSVG', :path => '../node_modules/react-native-svg'
-  pod 'RNCAsyncStorage', :path => '../node_modules/@react-native-community/async-storage'
 
   target 'ximaListonTests' do
     inherit! :complete

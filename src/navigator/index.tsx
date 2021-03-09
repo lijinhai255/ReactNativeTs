@@ -165,6 +165,8 @@ function ModalStackScreen() {
               style={styles.headerBackImage}
             />
           ),
+          
+          
         }}
       />
       <ModalStack.Screen
